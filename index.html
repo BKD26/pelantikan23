@@ -10,21 +10,22 @@
 
 body{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 background:linear-gradient(135deg,#0b3d91,#021c44);
 color:white;
 text-align:center;
 overflow-x:hidden;
 }
 
-/* Cover */
+/* COVER */
 .cover{
 height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-animation:fadeIn 2s;
+animation:fadeIn 1.5s;
+padding:20px;
 }
 
 .logo{
@@ -47,13 +48,14 @@ button:hover{
 background:#ffd700;
 }
 
-/* Isi */
+/* ISI */
 .isi{
 display:none;
 background:white;
 color:black;
 padding:30px;
-animation:fadeIn 2s;
+animation:fadeIn 1.5s;
+min-height:100vh;
 }
 
 .card{
@@ -61,15 +63,29 @@ background:#f4f4f4;
 padding:20px;
 margin:20px auto;
 border-radius:15px;
-max-width:400px;
+max-width:420px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
-.qr img{
-width:200px;
-margin-top:10px;
+/* LINK DRIVE */
+.drive-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#0b3d91;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
 }
 
-/* animasi */
+.drive-btn:hover{
+background:#ffd700;
+color:black;
+}
+
+/* ANIMASI */
 @keyframes fadeIn{
 from{opacity:0;transform:translateY(20px);}
 to{opacity:1;transform:translateY(0);}
@@ -109,18 +125,18 @@ to{opacity:1;transform:translateY(0);}
 
 <p>
 Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i
-untuk menghadiri acara pelantikan:
+untuk menghadiri acara pelantikan dan pengambilan sumpah jabatan.
 </p>
 
 <div class="card">
 
-<p>Tanggal</p>
+<p><b>Tanggal</b></p>
 <h3>28 Maret 2026</h3>
 
-<p>Jam</p>
+<p><b>Jam</b></p>
 <h3>13:00 WIT</h3>
 
-<p>Tempat</p>
+<p><b>Tempat</b></p>
 <h3>Aula Kantor Bupati</h3>
 
 <a href="https://maps.app.goo.gl/65x433EJDHGDSGj48" target="_blank">
@@ -129,6 +145,24 @@ Lihat Lokasi Google Maps
 
 </div>
 
+
+<!-- LINK GOOGLE DRIVE -->
+<div class="card">
+
+<p><b>Dokumen Undangan Resmi</b></p>
+
+<a class="drive-btn"
+href="https://drive.google.com/drive/folders/1aNEWnxYlUyxu4-I113JT18EvLLdMXjIP"
+target="_blank">
+
+Buka Dokumen Google Drive
+
+</a>
+
+</div>
+
+
+</div>
 
 
 <!-- MUSIK -->
@@ -148,7 +182,7 @@ document.getElementById("isi").style.display="block";
 }
 
 
-/* ambil parameter link */
+/* PARAMETER LINK */
 
 const params = new URLSearchParams(window.location.search);
 
@@ -158,24 +192,12 @@ const instansi = params.get("instansi") || "BKDPSDM";
 
 const pejabat = params.get("pejabat") || "ERIC O. LADO";
 
-const nomor = params.get("nomor") || "001";
-
 
 document.getElementById("namaTamu").innerText = tamu;
 
 document.getElementById("instansi").innerText = instansi;
 
 document.getElementById("pejabat").innerText = pejabat;
-
-
-/* QR Code unik */
-
-const qrData =
-"Undangan Pelantikan | Nomor: "+nomor+" | Nama: "+tamu;
-
-document.getElementById("qrCode").src =
-"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="
-+ encodeURIComponent(qrData);
 
 
 </script>
