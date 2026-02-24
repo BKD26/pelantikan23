@@ -1,167 +1,162 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Undangan Pelantikan</title>
 
 <style>
 
 body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#0b3d91,#021c44);
-    color:white;
-    text-align:center;
-    overflow-x:hidden;
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#0b3d91,#021c44);
+color:white;
+text-align:center;
+overflow-x:hidden;
 }
 
 /* COVER */
+
 .cover{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    animation:fadeIn 1.5s;
-    padding:20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+animation:fadeIn 1.5s;
+padding:20px;
 }
 
 .logo{
-    width:140px;
-    margin-bottom:20px;
+width:180px;
+margin-bottom:20px;
 }
 
 button{
-    padding:15px 35px;
-    font-size:18px;
-    background:white;
-    color:#0b3d91;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
+padding:15px 35px;
+font-size:18px;
+background:white;
+color:#0b3d91;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-    background:#ffd700;
+background:#ffd700;
 }
+
 
 /* ISI */
+
 .isi{
-    display:none;
-    background:white;
-    color:black;
-    padding:30px;
-    min-height:100vh;
+display:none;
+background:white;
+color:black;
+padding:30px;
+animation:fadeIn 1.5s;
+min-height:100vh;
 }
 
-/* CARD */
 .card{
-    background:#f4f4f4;
-    padding:25px;
-    margin:20px auto;
-    border-radius:15px;
-    max-width:450px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+background:#f4f4f4;
+padding:20px;
+margin:20px auto;
+border-radius:15px;
+max-width:420px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* FOTO */
-.foto-container{
-    max-width:450px;
-    margin:30px auto;
-}
 
-.foto{
-    width:100%;
-    border-radius:15px;
-    margin-bottom:20px;
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 1s ease;
-}
+/* LINK DRIVE */
 
-.foto.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* GOOGLE DRIVE BUTTON */
 .drive-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:14px 28px;
-    background:#0b3d91;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    transition:0.3s;
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#0b3d91;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
 }
 
 .drive-btn:hover{
-    background:#ffd700;
-    color:black;
+background:#ffd700;
+color:black;
 }
 
-/* GPS */
-.gps-btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:10px 20px;
-    background:#444;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-}
-
-.gps-btn:hover{
-    background:#0b3d91;
-}
 
 /* ANIMASI */
+
 @keyframes fadeIn{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <!-- COVER -->
+
 <div class="cover" id="cover">
 
 <img src="logo.png" class="logo">
 
-<h3>UNDANGAN RESMI</h3>
+<h3>UNDANGAN PELANTIKAN</h3>
 
-<h2 id="instansi">BKDPSDM</h2>
+<h2 id="instansi">BKD DAN PSDM</h2>
 
-<h3>PELANTIKAN PEJABAT</h3>
+<h3>PEJABAT YANG DILANTIK</h3>
 
-<h1 id="pejabat">ERIC O. LADO</h1>
+<h1 id="namaPejabat">ERIC O. LADO</h1>
 
 <p>Kepada Yth.</p>
 
-<h2 id="namaTamu">Bapak/Ibu</h2>
+<h2 id="namaTamu">Bapak/Ibu/Saudara/i</h2>
 
-<button onclick="bukaUndangan()">Buka Undangan</button>
+<button onclick="bukaUndangan()">Isi Undangan</button>
 
 </div>
 
 
+
 <!-- ISI -->
+
 <div class="isi" id="isi">
 
-<h2>PELANTIKAN DAN PENGAMBILAN SUMPAH / JANJI JABATAN</h2>
+<h2>
+PELANTIKAN DAN PENGAMBILAN SUMPAH / JANJI JABATAN  
+PEJABAT ADMINISTRATOR DAN PEJABAT PENGAWAS
+</h2>
+
 
 <p>
-Dalam rangka pelaksanaan Pelantikan dan Pengambilan Sumpah/Janji Jabatan
-di lingkungan Pemerintah Kabupaten Boven Digoel,
-dengan hormat mengundang Bapak/Ibu untuk hadir pada:
+Dalam rangka pelaksanaan Pelantikan dan Pengambilan Sumpah/Janji Jabatan  
+di lingkungan Pemerintah Kabupaten Boven Digoel,  
+maka dengan ini kami mengundang:
 </p>
+
+
+<h2 id="namaPejabatIsi">
+ERIC O. LADO
+</h2>
 
 
 <div class="card">
@@ -175,25 +170,13 @@ dengan hormat mengundang Bapak/Ibu untuk hadir pada:
 <p><b>Tempat</b></p>
 <h3>Aula Kantor Bupati Boven Digoel</h3>
 
-<a class="gps-btn"
-href="https://maps.app.goo.gl/65x433EJDHGDSGj48"
-target="_blank">
+<a href="https://maps.app.goo.gl/65x433EJDHGDSGj48" target="_blank">
 Buka Lokasi GPS
 </a>
 
 </div>
 
 
-<!-- FOTO DENGAN ANIMASI -->
-<div class="foto-container">
-
-<img src="foto1.jpg" class="foto">
-<img src="foto2.jpg" class="foto">
-
-</div>
-
-
-<!-- GOOGLE DRIVE -->
 <div class="card">
 
 <p><b>Undangan Resmi TTD Bupati</b></p>
@@ -209,66 +192,58 @@ Buka Dokumen Google Drive
 </div>
 
 
-<p>Atas kehadiran Bapak/Ibu diucapkan terima kasih.</p>
+<p>
+Demikian undangan ini disampaikan.  
+Atas kehadiran Bapak/Ibu diucapkan terima kasih.
+</p>
 
 </div>
 
 
+
 <!-- MUSIK -->
+
 <audio autoplay loop>
 <source src="musik.mp3" type="audio/mp3">
 </audio>
 
 
+
 <script>
 
 /* buka undangan */
+
 function bukaUndangan(){
 
 document.getElementById("cover").style.display="none";
+
 document.getElementById("isi").style.display="block";
 
 }
 
 
 /* PARAMETER LINK */
+
 const params = new URLSearchParams(window.location.search);
 
 const tamu =
 params.get("tamu") || "Bapak/Ibu/Saudara/i";
 
 const instansi =
-params.get("instansi") || "BKDPSDM";
+params.get("instansi") || "BKD DAN PSDM";
 
 const pejabat =
 params.get("pejabat") || "ERIC O. LADO";
 
 
 document.getElementById("namaTamu").innerText = tamu;
+
 document.getElementById("instansi").innerText = instansi;
-document.getElementById("pejabat").innerText = pejabat;
 
+document.getElementById("namaPejabat").innerText = pejabat;
 
-/* ANIMASI SCROLL FOTO */
-const fotos = document.querySelectorAll('.foto');
+document.getElementById("namaPejabatIsi").innerText = pejabat;
 
-window.addEventListener('scroll', function(){
-
-fotos.forEach(foto => {
-
-const posisi = foto.getBoundingClientRect().top;
-
-const tinggiLayar = window.innerHeight;
-
-if(posisi < tinggiLayar - 100){
-
-foto.classList.add('show');
-
-}
-
-});
-
-});
 
 </script>
 
