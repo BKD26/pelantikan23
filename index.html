@@ -119,18 +119,16 @@ transform:translateY(0);
 
 <img src="logo.png" class="logo">
 
-<h3>UNDANGAN PELANTIKAN</h3>
-
-<h2 id="instansi">BKD DAN PSDM</h2>
-
-<h3>PEJABAT YANG DILANTIK</h3>
-
-<h1 id="namaPejabat">ERIC O. LADO</h1>
+<h1>UNDANGAN PELANTIKAN</h1>
 
 <p>Kepada Yth.</p>
 
-<h2 id="namaTamu">Bapak/Ibu/Saudara/i</h2>
+<h1 id="namaPejabat">Baron B. Waibro</h1>
+<h2 id="instansi">BKD DAN PSDM</h2>
 
+<!-- 
+<h2 id="namaTamu">Bapak/Ibu/Saudara/i</h2>
+-->
 <button onclick="bukaUndangan()">Isi Undangan</button>
 
 </div>
@@ -143,21 +141,24 @@ transform:translateY(0);
 
 <h2>
 PELANTIKAN DAN PENGAMBILAN SUMPAH / JANJI JABATAN  
-PEJABAT ADMINISTRATOR DAN PEJABAT PENGAWAS
+ADMINISTRATOR DAN JABATAN PENGAWAS
 </h2>
 
+<div class="card">
 
-<p>
+<h4>
 Dalam rangka pelaksanaan Pelantikan dan Pengambilan Sumpah/Janji Jabatan  
 di lingkungan Pemerintah Kabupaten Boven Digoel,  
 maka dengan ini kami mengundang:
-</p>
-
+</h4> 
 
 <h2 id="namaPejabatIsi">
-ERIC O. LADO
+Baron B. Waibro
 </h2>
 
+<h4>
+Agar dapat menghadiri pelantikan dimaksud yang akan di laksanakan pada
+</h4> 
 
 <div class="card">
 
@@ -174,6 +175,8 @@ ERIC O. LADO
 Buka Lokasi GPS
 </a>
 
+
+
 </div>
 
 
@@ -189,13 +192,14 @@ Buka Dokumen Google Drive
 
 </a>
 
-</div>
+
 
 
 <p>
 Demikian undangan ini disampaikan.  
 Atas kehadiran Bapak/Ibu diucapkan terima kasih.
 </p>
+</div>
 
 </div>
 
@@ -233,7 +237,7 @@ const instansi =
 params.get("instansi") || "BKD DAN PSDM";
 
 const pejabat =
-params.get("pejabat") || "ERIC O. LADO";
+params.get("pejabat") || "Baron B. Waibro";
 
 
 document.getElementById("namaTamu").innerText = tamu;
