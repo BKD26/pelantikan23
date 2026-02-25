@@ -5,8 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Undangan Pelantikan</title>
 
-<style>
+<meta name="description" content="Undangan Resmi Pelantikan Pemerintah Kabupaten Boven Digoel">
 
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Undangan Pelantikan">
+<meta property="og:description" content="Undangan Resmi Pelantikan">
+<meta property="og:image" content="https://bkd26.github.io/pelantikan23/preview.jpg">
+<meta property="og:url" content="https://bkd26.github.io/pelantikan23/">
+<meta property="og:site_name" content="pelantikan23">
+<meta property="og:locale" content="id_ID">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="logo.png">
+
+<style>
 body{
     margin:0;
     font-family:'Segoe UI',sans-serif;
@@ -16,8 +30,7 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= COVER ================= */
-
+/* COVER */
 .cover{
     height:100vh;
     display:flex;
@@ -37,12 +50,10 @@ body{
     left:0;
     width:100%;
     height:65%;
-
     background-image:url('BUP.png'), url('WABUP.png');
     background-repeat:no-repeat,no-repeat;
     background-position:20% bottom, 80% bottom;
     background-size:300px,300px;
-
     opacity:0.58;
     pointer-events:none;
     z-index:0;
@@ -74,8 +85,7 @@ button:hover{
     background:#ffd700;
 }
 
-/* ================= ISI ================= */
-
+/* ISI */
 .isi{
     display:none;
     background:white;
@@ -94,44 +104,10 @@ button:hover{
     box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* BACKGROUND KHUSUS CARD UNDANGAN */
 .card-undangan{
     position:relative;
     overflow:hidden;
 }
-
-
-.btn-lokasi{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-}
-
-.icon-lokasi{
-    width:20px;
-    height:20px;
-}
-
-
-
-.dokumen-section{
-    margin-top:15px;
-}
-
-.judul-dokumen{
-    margin:0 0 6px 0; /* jarak bawah kecil */
-}
-
-.drive-btn{
-    display:inline-block;
-    margin:0; /* hilangkan jarak default */
-}
-
-p{
-    margin-bottom:5px;
-}
-
-
 
 .card-undangan::before{
     content:"";
@@ -140,12 +116,10 @@ p{
     left:0;
     width:100%;
     height:100%;
-
     background-image:url('patung.png');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     opacity:0.32;
     z-index:0;
 }
@@ -153,6 +127,21 @@ p{
 .card-undangan > *{
     position:relative;
     z-index:1;
+}
+
+.btn-lokasi{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#0b3d91;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.icon-lokasi{
+    width:20px;
+    height:20px;
 }
 
 .drive-btn{
@@ -172,14 +161,11 @@ p{
     color:black;
 }
 
-/* ================= ANIMASI ================= */
-
 @keyframes fadeIn{
     from{opacity:0; transform:translateY(20px);}
     to{opacity:1; transform:translateY(0);}
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
     .cover::before{
         background-size:160px,160px;
@@ -195,30 +181,19 @@ p{
         max-width:90%;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= COVER ================= -->
-
 <div class="cover" id="cover">
-
-    <img src="logo.png" class="logo">
-
+    <img src="logo.png" class="logo" alt="Logo Kabupaten">
     <h1>UNDANGAN PELANTIKAN</h1>
-
     <p>Kepada Yth.</p>
-
     <h1 id="namaPejabat">Baron B. Waibro</h1>
     <h2 id="instansi">BKD DAN PSDM</h2>
-
     <button onclick="bukaUndangan()">Isi Undangan</button>
-
 </div>
-
-<!-- ================= ISI ================= -->
 
 <div class="isi" id="isi">
 
@@ -227,9 +202,7 @@ PELANTIKAN DAN PENGAMBILAN SUMPAH / JANJI JABATAN
 PIMPINAN TINGGI PRATAMA, JABATAN ADMINISTRATOR DAN JABATAN PENGAWAS
 </h2>
 
-<!-- CARD DENGAN BACKGROUND FOTO -->
 <div class="card card-undangan">
-
 <h4>
 Dalam rangka pelaksanaan Pelantikan dan Pengambilan Sumpah/Janji Jabatan  
 di lingkungan Pemerintah Kabupaten Boven Digoel,  
@@ -251,45 +224,27 @@ Agar dapat menghadiri pelantikan dimaksud yang akan dilaksanakan pada:
 <p><b>Tempat</b></p>
 <h3>Aula Kantor Bupati Boven Digoel</h3>
 
-<a href="https://maps.app.goo.gl/65x433EJDHGDSGj48" target="_blank" class="btn-lokasi">
-    <img src="icon-lokasi.png" class="icon-lokasi">
-	<h4>Lokasi GPS</h4>
+<a href="https://maps.app.goo.gl/65x433EJDHGDSGj48" target="_blank" rel="noopener" class="btn-lokasi">
+<img src="icon-lokasi.png" class="icon-lokasi" alt="Lokasi">
+<span>Lokasi GPS</span>
 </a>
-
 </div>
 
-<!-- CARD TANPA BACKGROUND -->
 <div class="card">
-
-<div class="dokumen-section">
-    <p class="judul-dokumen"><b>Undangan Resmi TTD Bupati</b></p>
-
-    <a class="drive-btn"
-    href="https://drive.google.com/drive/folders/1aNEWnxYlUyxu4-I113JT18EvLLdMXjIP"
-    target="_blank">
-    Buka Dokumen Google Drive
-    </a>
-</div>
-
 <p>
 Demikian undangan ini disampaikan.  
 Atas kehadiran Bapak/Ibu diucapkan terima kasih.
 </p>
-
 </div>
 
 </div>
-
-<!-- ================= MUSIK ================= -->
 
 <audio id="bgm" loop>
 <source src="musik.mp3" type="audio/mp3">
 </audio>
 
 <script>
-
 function bukaUndangan(){
-
     const cover = document.getElementById("cover");
     const isi   = document.getElementById("isi");
     const audio = document.getElementById("bgm");
@@ -319,7 +274,6 @@ const pejabat  = params.get("pejabat")  || "Baron B. Waibro";
 document.getElementById("instansi").textContent = instansi;
 document.getElementById("namaPejabat").textContent = pejabat;
 document.getElementById("namaPejabatIsi").textContent = pejabat;
-
 </script>
 
 </body>
