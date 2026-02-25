@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pelantikan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0b3d91,#021c44);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* ================= COVER ================= */
+
+.cover{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+    animation:fadeIn 1.5s;
+}
+
+.cover::before{
+    content:"";
+    position:absolute;
+    top:160px;
+    left:0;
+    width:100%;
+    height:65%;
+
+    background-image:url('BUP.png'), url('WABUP.png');
+    background-repeat:no-repeat,no-repeat;
+    background-position:20% bottom, 80% bottom;
+    background-size:300px,300px;
+
+    opacity:0.58;
+    pointer-events:none;
+    z-index:0;
+}
+
+.cover > *{
+    position:relative;
+    z-index:1;
+}
+
+.logo{
+    width:180px;
+    margin-bottom:20px;
+}
+
+button{
+    padding:15px 35px;
+    font-size:18px;
+    background:white;
+    color:#0b3d91;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#ffd700;
+}
+
+/* ================= ISI ================= */
+
+.isi{
+    display:none;
+    background:white;
+    color:black;
+    padding:30px;
+    min-height:100vh;
+    animation:fadeIn 1.5s;
+}
+
+.card{
+    background:#f4f4f4;
+    padding:25px;
+    margin:20px auto;
+    border-radius:15px;
+    max-width:420px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* BACKGROUND KHUSUS CARD UNDANGAN */
+.card-undangan{
+    position:relative;
+    overflow:hidden;
+}
+
+
+.btn-lokasi{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.icon-lokasi{
+    width:20px;
+    height:20px;
+}
+
+
+
+.dokumen-section{
+    margin-top:15px;
+}
+
+.judul-dokumen{
+    margin:0 0 6px 0; /* jarak bawah kecil */
+}
+
+.drive-btn{
+    display:inline-block;
+    margin:0; /* hilangkan jarak default */
+}
+
+p{
+    margin-bottom:5px;
+}
+
+
+
+.card-undangan::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-image:url('patung.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    opacity:0.32;
+    z-index:0;
+}
+
+.card-undangan > *{
+    position:relative;
+    z-index:1;
+}
+
+.drive-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#0b3d91;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.drive-btn:hover{
+    background:#ffd700;
+    color:black;
+}
+
+/* ================= ANIMASI ================= */
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .cover::before{
+        background-size:160px,160px;
+        background-position:10% bottom, 90% bottom;
+        height:55%;
+    }
+
+    .logo{
+        width:140px;
+    }
+
+    .card{
+        max-width:90%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= COVER ================= -->
+
+<div class="cover" id="cover">
+
+    <img src="logo.png" class="logo">
+
+    <h1>UNDANGAN PELANTIKAN</h1>
+
+    <p>Kepada Yth.</p>
+
+    <h1 id="namaPejabat">Baron B. Waibro</h1>
+    <h2 id="instansi">BKD DAN PSDM</h2>
+
+    <button onclick="bukaUndangan()">Isi Undangan</button>
+
+</div>
+
+<!-- ================= ISI ================= -->
+
+<div class="isi" id="isi">
+
+<h2>
+PELANTIKAN DAN PENGAMBILAN SUMPAH / JANJI JABATAN  
+PIMPINAN TINGGI PRATAMA, JABATAN ADMINISTRATOR DAN JABATAN PENGAWAS
+</h2>
+
+<!-- CARD DENGAN BACKGROUND FOTO -->
+<div class="card card-undangan">
+
+<h4>
+Dalam rangka pelaksanaan Pelantikan dan Pengambilan Sumpah/Janji Jabatan  
+di lingkungan Pemerintah Kabupaten Boven Digoel,  
+maka dengan ini kami mengundang:
+</h4>
+
+<h2 id="namaPejabatIsi">Baron B. Waibro</h2>
+
+<h4>
+Agar dapat menghadiri pelantikan dimaksud yang akan dilaksanakan pada:
+</h4>
+
+<p><b>Hari / Tanggal</b></p>
+<h3>Senin, 28 Maret 2026</h3>
+
+<p><b>Jam</b></p>
+<h3>13:00 WIT</h3>
+
+<p><b>Tempat</b></p>
+<h3>Aula Kantor Bupati Boven Digoel</h3>
+
+<a href="https://maps.app.goo.gl/65x433EJDHGDSGj48" target="_blank" class="btn-lokasi">
+    <img src="icon-lokasi.png" class="icon-lokasi">
+	<h4>Lokasi GPS</h4>
+</a>
+
+</div>
+
+<!-- CARD TANPA BACKGROUND -->
+<div class="card">
+
+<div class="dokumen-section">
+    <p class="judul-dokumen"><b>Undangan Resmi TTD Bupati</b></p>
+
+    <a class="drive-btn"
+    href="https://drive.google.com/drive/folders/1aNEWnxYlUyxu4-I113JT18EvLLdMXjIP"
+    target="_blank">
+    Buka Dokumen Google Drive
+    </a>
+</div>
+
+<p>
+Demikian undangan ini disampaikan.  
+Atas kehadiran Bapak/Ibu diucapkan terima kasih.
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= MUSIK ================= -->
+
+<audio id="bgm" loop>
+<source src="musik.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+function bukaUndangan(){
+
+    const cover = document.getElementById("cover");
+    const isi   = document.getElementById("isi");
+    const audio = document.getElementById("bgm");
+
+    cover.style.opacity = "0";
+
+    setTimeout(() => {
+        cover.style.display = "none";
+        isi.style.display = "block";
+        isi.style.opacity = "0";
+
+        setTimeout(() => {
+            isi.style.opacity = "1";
+        }, 50);
+    }, 500);
+
+    if (audio) {
+        audio.play().catch(() => {});
+    }
+}
+
+const params = new URLSearchParams(window.location.search);
+
+const instansi = params.get("instansi") || "BKD DAN PSDM";
+const pejabat  = params.get("pejabat")  || "Baron B. Waibro";
+
+document.getElementById("instansi").textContent = instansi;
+document.getElementById("namaPejabat").textContent = pejabat;
+document.getElementById("namaPejabatIsi").textContent = pejabat;
+
+</script>
+
+</body>
+</html>
